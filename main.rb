@@ -48,7 +48,7 @@ if `which appcenter`.empty?
   puts 'Installing Appcenter CLI'
   cli_version = get_env_variable('AC_APPCENTER_VERSION')
   cli_version = cli_version.nil? ? '' : "@#{cli_version}"
-  run_command("npm install -g appcenter-cli#{cli_version}")
+  run_command("sudo npm install -g appcenter-cli#{cli_version}")
 end
 
 token = env_has_key('AC_APPCENTER_TOKEN')
